@@ -77,6 +77,20 @@
 \usepackage{tikz,physics}                           % Physics Presets
 
 
+
+
+% ----------------------------------------------------------------------
+%           Personal Modifications
+% ----------------------------------------------------------------------
+\usepackage{libertine}        % provides bold small caps
+\usepackage{esint}            % fancy integral symbols
+\usepackage{soul}             % strike-through
+% \usepackage{newtxmath}        % alternative \vmathbb{1} for \mathbb{1}, etc
+
+% \DeclareFontShape{T1}{lmr}{m}{scit}{<->ssub*lmr/m/scsl}{}%
+
+
+
 % ----------------------------------------------------------------------
 %           User Page Prefrences 
 % ----------------------------------------------------------------------
@@ -228,14 +242,14 @@
 \theoremstyle{claim}
 \newtheorem{remark}{Remark}
 
-\theoremstyle{theorem}
-\newtheorem{blockquote}{Blockquote}
+\theoremstyle{claim}
+\newtheorem{blockquote}{Comment}
 \tcolorboxenvironment{blockquote}{
   boxrule=0pt,
   boxsep=0pt,
-  colback={White!90!Apricot},
+  colback={White!90!Periwinkle},
   enhanced jigsaw, 
-  borderline west={1pt}{0pt}{Gray},
+  borderline west={1pt}{0pt}{Periwinkle},
   sharp corners,
   before skip=10pt,
   after skip=10pt,
@@ -246,6 +260,20 @@
 
 
 
+\theoremstyle{theorem}
+\newtheorem{review}{Review}
+\tcolorboxenvironment{review}{
+  boxrule=0pt,
+  boxsep=0pt,
+  blanker,
+  borderline west={1pt}{0pt}{Green},
+  before skip=10pt,
+  after skip=10pt,
+  sharp corners,
+  left=5pt,
+  right=5pt,
+  breakable,
+}
 
 
 
@@ -452,7 +480,7 @@
 \end{flushleft}
 \end{minipage}
 \else %% if emailaddfalse do nothing
-\PackageWarningNoLine{\jname}{E-mails are missing.\MessageBreak Plese use \protect\emailAdd\space macro to provide e-mails.}
+\PackageWarningNoLine{\jname}{E-mails are missing.\MessageBreak Please use \protect\emailAdd\space macro to provide e-mails.}
 \fi
 \afterEmailSpace
 %Erratum or addendum
